@@ -49,9 +49,9 @@ public class MathLab01st
 		System.out.println("\n\nPerimeters of 2D Shapes");
 		System.out.println("=====================================================");
 		System.out.println("Square Perimeter:                 " + Geometry.squarePerimeter(side));
-//		System.out.println("Pentagon Perimeter:               " + Geometry.pentagonPerimeter(side));
-//		System.out.println("Hexagon Perimeter:                " + Geometry.hexagonPerimeter(side));
-//		System.out.println("Octagon Perimeter:                " + Geometry.octagonPerimeter(side));
+		System.out.println("Pentagon Perimeter:               " + Geometry.pentagonPerimeter(side));
+		System.out.println("Hexagon Perimeter:                " + Geometry.hexagonPerimeter(side));
+		System.out.println("Octagon Perimeter:                " + Geometry.octagonPerimeter(side));
 //		System.out.println("Rectangle Perimeter:              " + Geometry.rectanglePerimeter(length,width));
 //		System.out.println("Circle Perimeter (circumference): " + Geometry.circumference(radius));
 		System.out.println("\n");
@@ -111,8 +111,15 @@ class Geometry
 	{ 
 	    return 5 * s; 
 	}
+	public static double hexagonPerimeter (double s)                      
+	{ 
+	    return 6 * s; 
+	}
 
-
+	public static double octoganPerimeter (double s)                      
+	{ 
+	    return 8 * s; 
+	}
 
 	
 		
