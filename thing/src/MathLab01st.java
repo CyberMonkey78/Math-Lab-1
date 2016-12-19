@@ -52,8 +52,8 @@ public class MathLab01st
 		System.out.println("Pentagon Perimeter:               " + Geometry.pentagonPerimeter(side));
 		System.out.println("Hexagon Perimeter:                " + Geometry.hexagonPerimeter(side));
 		System.out.println("Octagon Perimeter:                " + Geometry.octagonPerimeter(side));
-//		System.out.println("Rectangle Perimeter:              " + Geometry.rectanglePerimeter(length,width));
-//		System.out.println("Circle Perimeter (circumference): " + Geometry.circumference(radius));
+		System.out.println("Rectangle Perimeter:              " + Geometry.rectanglePerimeter(length,width));
+		System.out.println("Circle Perimeter (circumference): " + Geometry.circumference(radius));
 		System.out.println("\n");
 	}
 	
@@ -62,12 +62,12 @@ public class MathLab01st
 		System.out.println("Areas of 2D Shapes");
 		System.out.println("=====================================================");
 		System.out.println("Square Area:                      " + Geometry.squareArea(side));
-//		System.out.println("Rectangle Area:                   " + Geometry.rectangleArea(length,width));
-//		System.out.println("Parallelogram Area:               " + Geometry.parallelogramArea(base1,height));
-//		System.out.println("Triangle Area:                    " + Geometry.triangleArea(base1,height));		
-//		System.out.println("Trapezoid Area:                   " + Geometry.trapezoidArea(base1,base2,height));
-//		System.out.println("Hexagon Area:                     " + Geometry.hexagonArea(base1,base2,height));
-//		System.out.println("Circle Area:                      " + Geometry.circleArea(radius));
+		System.out.println("Rectangle Area:                   " + Geometry.rectangleArea(length,width));
+		System.out.println("Parallelogram Area:               " + Geometry.parallelogramArea(base1,height));
+		System.out.println("Triangle Area:                    " + Geometry.triangleArea(base1,height));		
+		System.out.println("Trapezoid Area:                   " + Geometry.trapezoidArea(base1,base2,height));
+		System.out.println("Hexagon Area:                     " + Geometry.hexagonArea(base1,base2,height));
+		System.out.println("Circle Area:                      " + Geometry.circleArea(radius));
 		System.out.println("\n");
 	}
 
@@ -78,7 +78,7 @@ public class MathLab01st
 		System.out.println("Surface Areas of 3D Shapes");
 		System.out.println("=====================================================");
 		System.out.println("Cube Surface Area:                " + Geometry.cubeSurfaceArea(side));
-//		System.out.println("Square Prism Surface Area:        " + Geometry.squarePrismSurfaceArea(side,height));
+		System.out.println("Square Prism Surface Area:        " + Geometry.squarePrismSurfaceArea(side,height));
 //		System.out.println("Rectangular Prism Surface Area:   " + Geometry.rectangularPrismSurfaceArea(length,width,height));
 //		System.out.println("Sphere Surface Area:              " + Geometry.sphereSurfaceArea(radius));
 		System.out.println("\n");
@@ -116,11 +116,23 @@ class Geometry
 	    return 6 * s; 
 	}
 
-	public static double octoganPerimeter (double s)                      
+	public static double octagonPerimeter (double s)                      
 	{ 
 	    return 8 * s; 
 	}
-
+	
+	public static double rectanglePerimeter (double l, double w)                      
+	{ 
+	    return (2 * l)+(2 * w); 
+	    
+	}
+	
+	
+	public static double circumference (double r)                      
+	{ 
+	    return Math.PI * r * 2;
+	    
+	}
 	
 		
 	// 2D Areas
@@ -129,14 +141,48 @@ class Geometry
 	    return s * s; 
 	}
 	
-
-
-
+	public static double rectangleArea (double l, double w)             
+	{ 
+	    return l * w; 
+	}
+	
+	public static double parallelogramArea (double b, double h)             
+	{ 
+	    return b * h; 
+	}
+	public static double triangleArea (double b, double h)             
+	{ 
+	    return b * h / 2; 
+	}
+	public static double trapezoidArea (double b1, double h, double b2)             
+	{ 
+	    return (b1+b2)/2*h; 
+	}
+	public static double hexagonArea (double b1, double h, double b2)             
+	{ 
+	    return (b1+b2)*h; 
+	}
+	public static double circleArea (double r)             
+	{ 
+	    return Math.PI*(r*r); 
+	}
 
     // 3D Surface Areas
 	public static double cubeSurfaceArea (double s)                      
 	{ 
 	    return 6 * s * s; 
+	}
+	public static double squarePrismSurfaceArea (double s, double h)                      
+	{ 
+	    return 2*s*s+4*s*h; 
+	}
+	public static double rectanglePrismSurfaceArea (double l, double h, double w)                      
+	{ 
+	    return 2*l*w+2*l*h+2*w*h; 
+	}
+	public static double sphereSurfaceArea (double r)                      
+	{ 
+	    return 4*Math.PI; 
 	}
 	
 	
